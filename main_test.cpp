@@ -3,31 +3,40 @@
 #include "CQuadrilateral.h"
 #include "CRectangle.h"
 #include "CRhombus.h"
+#include "List.h"
 
-const int LISTL=6; 
+const int LISTL=100; 
 
 Quadrilateral* quadList[LISTL];
 
 void Show() {
-	
+	cout << endl;
+	cout << "\t\t*** Show function ***" << endl;
+	cout << endl;
 	int i; 
 	
 	for (i=0; i<LISTL; i++)
-		quadList[i]->Drawing();
+		if (quadList[i] != NULL)
+		{
+			cout << "Quadrilateral number " << i << ":" << endl;
+			quadList[i]->Drawing();
+		}
+	cout << endl;
+	cout << endl;
 	
 }
 
 
 int main() {
 
-	 
+
 	Format f1, f2;
 	
 	f1.fill = r;
 	f1.outline = b; 
 	f2.fill = g;
 	f2.outline = w;
-	
+/*
 	Rectangle rectA(10,5);
 	Rectangle rectB(3,7,f1);
 	Rectangle rectC = rectA;
@@ -52,6 +61,14 @@ int main() {
 	
 	Show();
 
+*/
+	List list;
+	Quadrilateral* q = new Rectangle(2, 4);
+	list.AddShape(q);
+	list.ViewAll();
+	Quadrilateral* p = new Rhombus(3, 1, f2);
+	list.AddShape(p);
+	list.ViewAll();
 
 	return 0;
 
