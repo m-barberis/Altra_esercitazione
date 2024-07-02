@@ -53,11 +53,13 @@ void List::RmShape(int index)
 
 void List::ViewShape(int index)
 {
-	if (quadList[index] != 0)
+	if (quadList[index] != NULL)
 	{
 		cout << "ViewShape: DRAWING SHAPE NUMBER " << index << ":" << endl;
 		quadList[index]->Drawing();
 	}
+	else
+		cout << "ViewShape: NO SHAPE TO VIEW" << endl;
 }
 
 void List::ViewAll()

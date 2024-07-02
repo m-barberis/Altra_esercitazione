@@ -279,6 +279,7 @@ void Rectangle::Drawing() {
 		cout << " Outline colour: NO COLOUR FOUND" << endl;
 		break;
 	}
+	cout << "Measures: " << width << ", " << height <<"." << endl;
 	cout << endl;
 }
 

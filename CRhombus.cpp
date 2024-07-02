@@ -295,6 +295,7 @@ void Rhombus::Drawing() {
 		cout << " Outline colour: NO COLOUR FOUND" << endl;
 		break;
 	}
+	cout << "Measures: " << diagL << ", " << diagS << "." << endl;
 	cout << endl;
 }
 
